@@ -12,8 +12,9 @@ export default function Home() {
     )
 }
 
-export const getServerSideProps = async () => {
-    const session = await getSession()
+export const getServerSideProps = async (context: any) => {
+    const session = await getSession(context)
+    console.log('session', session)
     if (!session) {
         return {
             redirect: { destination: '/login' },

@@ -1,5 +1,6 @@
 import { ReactElement } from 'react'
 import useWaitForHydration from '@/hooks/useWaitForHydration'
+import Nav from '../modules/Nav'
 
 interface IPortal {
     children: ReactElement
@@ -18,8 +19,7 @@ const Portal = ({ children }: IPortal) => {
 
     return (
         <div className='portal' data-cy='portal'>
-            {/* <Nav /> */}
-            <div>NAV</div>
+            <Nav />
             <section className='portal-content'>{children}</section>
         </div>
     )

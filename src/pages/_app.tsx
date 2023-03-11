@@ -8,7 +8,7 @@ import PortalContext from '@/contexts/PortalContext'
 import Head from 'next/head'
 
 interface IApp extends AppProps {
-    session: any // FIX
+    session: any
 }
 interface AppPropsWithLayout extends AppProps {
     Component: NextPageWithLayout
